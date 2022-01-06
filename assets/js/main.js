@@ -245,6 +245,50 @@
 
   });
 
+  //   function detail(num, str) {
+  //   let artist = document.getElementById(`artistName${num}`);
+  //   let title = document.getElementById(`itemTitle${num}`);
+  //   let image = document.getElementById(`itemImg${num}`);
+  //   let price = document.getElementById(`itemPrice${num}`);
+  //   let mdlDetail = document.getElementById('mdl-detail');
+  //   let mdlTitle = document.getElementById('mdl-title');
+  //   let mdlImage = document.getElementById('mdl-img');
+  //   let mdlPrice = document.getElementById('mdl-price');
+  //   mdlTitle.innerHTML = `${title.innerHTML} by ${artist.innerHTML}`
+  //   mdlImage.innerHTML = image.innerHTML;
+  //   mdlDetail.innerHTML = str;
+  //   mdlPrice.innerHTML = price.innerHTML;
+  //   console.log(image.innerHTML)
+  // }
+/**
+ * Galery Isotope and Filter
+ */
+  window.addEventListener('load', () => {
+    let galeryContainer = select('.product-container');
+    if (galeryContainer) {
+      let galeryIsotope = new Isotope(galeryContainer, {
+        itemSelector: '.product-item'
+      });
+
+      let galeryFilters = select('#product-filters li', true);
+
+      on ('click', '#product-filters li', function (e){
+        e.preventDefault();
+        galeryFilters.forEach(function (el) {
+          el.classList.remove('product-active');
+        });
+        this.classList.add('product-active');
+
+        galeryIsotope.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        galeryIsotope.on('arrangeComplete', function () {
+          AOS.refresh()
+        });
+        }, true);
+      } 
+    });
+
   /**
    * Initiate portfolio lightbox 
    */
