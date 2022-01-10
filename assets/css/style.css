@@ -1041,8 +1041,6 @@ section {
 }
 
 .card-img-top {
-  padding-left: 20px;
-  padding-right: 20px;
   object-fit: cover;
 }
 /*-------------------------------------------------------------
