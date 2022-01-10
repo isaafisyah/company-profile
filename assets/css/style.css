@@ -1193,10 +1193,7 @@ section {
   line-height: 26px;
   color: #777777;
 }
-.team .member:hover .social {
-  opacity: 1;
-  bottom: 15px;
-}
+
 
 .team-body {
   padding: 80px 0;
