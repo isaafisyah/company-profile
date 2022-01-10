@@ -929,7 +929,7 @@ section {
 }
 .portfolio .portfolio-item .portfolio-info p {
   color: #555555;
-  font-size: 14px;
+  font-size: 30px;
   margin-bottom: 0;
 }
 .portfolio .portfolio-item .portfolio-info .preview-link,
@@ -979,7 +979,10 @@ section {
   padding-top: 40px;
 }
 .portfolio-details .portfolio-details-slider img {
-  width: 100%;
+  width: 60%;
+  
+  object-fit: cover;
+  margin-left: 20%;
 }
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
@@ -1005,31 +1008,14 @@ section {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(34, 34, 34, 0.08);
 }
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
+
+.portfolio-info h2 {
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
 }
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
+.portfolio-info p {
+  text-align: justify;
   font-size: 15px;
-}
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.portfolio-details .portfolio-description p {
-  padding: 0;
 }
 
 .item-header {
@@ -1074,8 +1060,9 @@ section {
 }
 
 .card-img-top {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  object-fit: cover;
 }
 /*-------------------------------------------------------------
 # Modal
@@ -1113,7 +1100,14 @@ section {
   margin-top: 20px;
 }
 
+.mdl-btn {
+  background-color: #577BC1;
+  border-radius: 5px;
+  border-style: none;
+  align-items: center;
+  color: #fff;
 
+}
 /*-------------------------------------------------------------
 # Galery
 -------------------------------------------------------------*/
@@ -1147,8 +1141,11 @@ section {
 }
 
 .portfolio .product-item {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  /* padding-left: 10px;
+  padding-right: 10px; */
 }
+
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -1220,7 +1217,68 @@ section {
   bottom: 15px;
 }
 
+.team-body {
+  padding: 80px 0;
+  background: url("../img/testimonials-bg.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
 
+.team-body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.team-body .team-item .team-img {
+  width: 100px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  margin: 0 auto;
+}
+
+.team-body .team-item {
+  text-align: center;
+  color: #fff;
+}
+
+.team-body .team-item h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #fff;
+}
+.team-body .team-item h4 {
+  font-size: 14px;
+  color: #ddd;
+  margin: 0 0 15px 0;
+}
+.team-body .team-item .quote-icon-left,
+.team-body .team-item .quote-icon-right {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 26px;
+}
+.team-body .team-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+.team-body .team-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+.team-body .taem-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+  color: #eee;
+}
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
