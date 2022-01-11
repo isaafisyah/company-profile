@@ -1,6 +1,28 @@
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+=======
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -176,7 +198,7 @@ h6 {
   color: #106eea;
 }
 #header .logo img {
-  max-height: 40px;
+  max-height: 30px;
 }
 
 .scrolled-offset {
@@ -691,9 +713,8 @@ section {
   font-weight: 600;
   font-size: 26px;
 }
-.about .content ul {
-  list-style: none;
-  padding: 0;
+.about .content p {
+  font-size: 16px;
 }
 .about .content ul li {
   display: flex;
@@ -716,7 +737,7 @@ section {
   font-size: 18px;
   color: #555555;
 }
-.about .content ul p {
+.about .content p {
   font-size: 15px;
 }
 .about .content p:last-child {
