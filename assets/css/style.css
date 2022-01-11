@@ -188,7 +188,7 @@ h6 {
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   font-family: "Poppins", sans-serif;
 }
 #header .logo a {
@@ -200,7 +200,11 @@ h6 {
 #header .logo img {
   max-height: 30px;
 }
-
+@media (max-width: 991px) {
+  #header .logo {
+    font-size: 15px;
+  }
+}
 .scrolled-offset {
   margin-top: 70px;
 }
